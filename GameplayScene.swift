@@ -65,10 +65,10 @@ class GameplayScene: SKScene {
     func initializeVariables() {
         
         center = (self.scene?.size.width)! / (self.scene?.size.height)!;
-        player = self.childNode(withName: "Player") as? Player!;
+        player = self.childNode(withName: "Player") as? Player? as! Player;
         player?.initializePlayerAndAnimations();
         
-        mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode!;
+        mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode? as! SKCameraNode;
         
         getBackgrounds();
         
@@ -78,9 +78,9 @@ class GameplayScene: SKScene {
     
     func getBackgrounds() {
     
-        bg1 = self.childNode(withName: "BG 1") as? BGClass!;
-        bg2 = self.childNode(withName: "BG 2") as? BGClass!;
-        bg3 = self.childNode(withName: "BG 3") as? BGClass!;
+        bg1 = self.childNode(withName: "BG 1") as? BGClass? as! BGClass;
+        bg2 = self.childNode(withName: "BG 2") as? BGClass? as! BGClass;
+        bg3 = self.childNode(withName: "BG 3") as? BGClass? as! BGClass;
         
     }
     
